@@ -9,22 +9,23 @@
 import Foundation
 
 struct DataATMResponse: Decodable {
-    enum CodingKeys: String, CodingKey {
-        case devices
-    }
-    let devices: [DataATM]
+//    enum CodingKeys: String, CodingKey {
+//        case devices
+//    }
+    var devices = [DataATM]()
 }
 
 struct DataATM: Decodable {
-    var type : String?
-    var cityRU : String?
-    var cityUA : String?
-    var cityEN : String?
-    var fullAdressRu : String?
-    var fullAdressUa : String?
-    var fullAdressEn : String?
-    var placeRu : String?
-    var placeUa : String?
-    var latitude : Double?
-    var longitude : Double?
+    var type : String
+    var cityRU : String
+    var cityUA : String
+    var cityEN : String
+    var fullAddressRu : String
+    var fullAddressUa : String
+    var fullAddressEn : String
+    var placeRu : String
+    var placeUa : String
+    var latitude : String
+    var longitude : String
+    
 }

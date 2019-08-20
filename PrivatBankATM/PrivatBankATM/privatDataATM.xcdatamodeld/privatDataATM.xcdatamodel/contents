@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18F132" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CoreDataATM" representedClassName="CoreDataATM" syncable="YES" codeGenerationType="class">
+        <attribute name="cityEN" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cityRU" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cityUA" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fullAddressEn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fullAddressRu" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fullAddressUa" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="placeRu" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="placeUa" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="CoreDataATMAsArray" representedClassName="CoreDataATMAsArray" syncable="YES" codeGenerationType="class">
+        <attribute name="dataOfArray" optional="YES" attributeType="Binary" syncable="YES"/>
+    </entity>
+    <entity name="CoreDataATMResponse" representedClassName="CoreDataATMResponse" syncable="YES" codeGenerationType="class">
+        <relationship name="coreDataATM" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoreDataATM" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CoreDataATMResponse" positionX="-228.3359375" positionY="19.25" width="128" height="58"/>
+        <element name="CoreDataATM" positionX="-54" positionY="0" width="128" height="208"/>
+        <element name="CoreDataATMAsArray" positionX="-126" positionY="99" width="128" height="60"/>
+    </elements>
+</model>

@@ -3,11 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2EDF70F562559DB4B7BE746F /* Pods_PrivatBankATM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1866BD4898A153DD31780253 /* Pods_PrivatBankATM.framework */; };
+		A909923C230BDA1900E7FEDD /* Ext-SearchViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A909923B230BDA1900E7FEDD /* Ext-SearchViewController+TableView.swift */; };
+		A909923E230BE51800E7FEDD /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A909923D230BE51800E7FEDD /* SearchTableViewCell.swift */; };
+		A9099240230BF34000E7FEDD /* Ext-UIActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A909923F230BF34000E7FEDD /* Ext-UIActivityIndicatorView.swift */; };
+		A9099242230BFCB000E7FEDD /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9099241230BFCB000E7FEDD /* SavedViewController.swift */; };
 		A94C46CB230A9B4F0058511E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94C46CA230A9B4F0058511E /* AppDelegate.swift */; };
 		A94C46D0230A9B4F0058511E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A94C46CE230A9B4F0058511E /* Main.storyboard */; };
 		A94C46D2230A9B560058511E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A94C46D1230A9B560058511E /* Assets.xcassets */; };
@@ -18,12 +22,19 @@
 		A9790E0C230AA8E5004A9794 /* Extension-SearchViewController+UISearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9790E0B230AA8E5004A9794 /* Extension-SearchViewController+UISearchBarDelegate.swift */; };
 		A9790E0E230AA9DA004A9794 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9790E0D230AA9DA004A9794 /* NetworkManager.swift */; };
 		A9790E10230AAF9F004A9794 /* DataATM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9790E0F230AAF9F004A9794 /* DataATM.swift */; };
+		A9790E13230AD0AE004A9794 /* privatDataATM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A9790E11230AD0AE004A9794 /* privatDataATM.xcdatamodeld */; };
+		A9790E15230AEC75004A9794 /* CDataATM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9790E14230AEC75004A9794 /* CDataATM.swift */; };
+		A9790E17230AF589004A9794 /* StructDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9790E16230AF589004A9794 /* StructDecoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1866BD4898A153DD31780253 /* Pods_PrivatBankATM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrivatBankATM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		275AA290E4DC525E3537B2B6 /* Pods-PrivatBankATM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrivatBankATM.release.xcconfig"; path = "Target Support Files/Pods-PrivatBankATM/Pods-PrivatBankATM.release.xcconfig"; sourceTree = "<group>"; };
 		54041DBD9D6F15245286DBEA /* Pods-PrivatBankATM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrivatBankATM.debug.xcconfig"; path = "Target Support Files/Pods-PrivatBankATM/Pods-PrivatBankATM.debug.xcconfig"; sourceTree = "<group>"; };
+		A909923B230BDA1900E7FEDD /* Ext-SearchViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext-SearchViewController+TableView.swift"; sourceTree = "<group>"; };
+		A909923D230BE51800E7FEDD /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		A909923F230BF34000E7FEDD /* Ext-UIActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext-UIActivityIndicatorView.swift"; sourceTree = "<group>"; };
+		A9099241230BFCB000E7FEDD /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
 		A94C46C7230A9B4F0058511E /* PrivatBankATM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrivatBankATM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A94C46CA230A9B4F0058511E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A94C46CF230A9B4F0058511E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -36,6 +47,9 @@
 		A9790E0B230AA8E5004A9794 /* Extension-SearchViewController+UISearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-SearchViewController+UISearchBarDelegate.swift"; sourceTree = "<group>"; };
 		A9790E0D230AA9DA004A9794 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		A9790E0F230AAF9F004A9794 /* DataATM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataATM.swift; sourceTree = "<group>"; };
+		A9790E12230AD0AE004A9794 /* privatDataATM.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = privatDataATM.xcdatamodel; sourceTree = "<group>"; };
+		A9790E14230AEC75004A9794 /* CDataATM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDataATM.swift; sourceTree = "<group>"; };
+		A9790E16230AF589004A9794 /* StructDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructDecoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +70,6 @@
 				54041DBD9D6F15245286DBEA /* Pods-PrivatBankATM.debug.xcconfig */,
 				275AA290E4DC525E3537B2B6 /* Pods-PrivatBankATM.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -98,6 +111,7 @@
 				A94C46D1230A9B560058511E /* Assets.xcassets */,
 				A94C46D3230A9B560058511E /* LaunchScreen.storyboard */,
 				A94C46D6230A9B560058511E /* Info.plist */,
+				A9790E11230AD0AE004A9794 /* privatDataATM.xcdatamodeld */,
 			);
 			path = PrivatBankATM;
 			sourceTree = "<group>";
@@ -106,6 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				A9790E0F230AAF9F004A9794 /* DataATM.swift */,
+				A9790E14230AEC75004A9794 /* CDataATM.swift */,
+				A9790E16230AF589004A9794 /* StructDecoder.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -115,6 +131,10 @@
 			children = (
 				A9790E05230AA705004A9794 /* SearchViewController.swift */,
 				A9790E0B230AA8E5004A9794 /* Extension-SearchViewController+UISearchBarDelegate.swift */,
+				A909923B230BDA1900E7FEDD /* Ext-SearchViewController+TableView.swift */,
+				A909923D230BE51800E7FEDD /* SearchTableViewCell.swift */,
+				A909923F230BF34000E7FEDD /* Ext-UIActivityIndicatorView.swift */,
+				A9099241230BFCB000E7FEDD /* SavedViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -253,9 +273,16 @@
 			files = (
 				A9790E0E230AA9DA004A9794 /* NetworkManager.swift in Sources */,
 				A9790E08230AA775004A9794 /* SearchViewModel.swift in Sources */,
+				A9099242230BFCB000E7FEDD /* SavedViewController.swift in Sources */,
 				A9790E0A230AA781004A9794 /* Box.swift in Sources */,
 				A9790E06230AA705004A9794 /* SearchViewController.swift in Sources */,
+				A9790E15230AEC75004A9794 /* CDataATM.swift in Sources */,
+				A9790E17230AF589004A9794 /* StructDecoder.swift in Sources */,
+				A9790E13230AD0AE004A9794 /* privatDataATM.xcdatamodeld in Sources */,
 				A94C46CB230A9B4F0058511E /* AppDelegate.swift in Sources */,
+				A909923C230BDA1900E7FEDD /* Ext-SearchViewController+TableView.swift in Sources */,
+				A909923E230BE51800E7FEDD /* SearchTableViewCell.swift in Sources */,
+				A9099240230BF34000E7FEDD /* Ext-UIActivityIndicatorView.swift in Sources */,
 				A9790E0C230AA8E5004A9794 /* Extension-SearchViewController+UISearchBarDelegate.swift in Sources */,
 				A9790E10230AAF9F004A9794 /* DataATM.swift in Sources */,
 			);
@@ -457,6 +484,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A9790E11230AD0AE004A9794 /* privatDataATM.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A9790E12230AD0AE004A9794 /* privatDataATM.xcdatamodel */,
+			);
+			currentVersion = A9790E12230AD0AE004A9794 /* privatDataATM.xcdatamodel */;
+			path = privatDataATM.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A94C46BF230A9B4F0058511E /* Project object */;
 }

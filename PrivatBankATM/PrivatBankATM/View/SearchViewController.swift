@@ -10,10 +10,12 @@ import UIKit
 
 class SearchViewController: UIViewController {
 
-    var searchViewModel: SearchViewModel?
+    var searchViewModel = SearchViewModel()
     
-    @IBOutlet weak var searchBarView: UISearchBar!
+    let searchController = UISearchController(searchResultsController: nil)
+
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityView: UIActivityIndicatorView!
     
     
     override func viewDidLoad() {
@@ -21,15 +23,32 @@ class SearchViewController: UIViewController {
 
         setupViews()
         
-        searchViewModel?.fetchData(clouser: {
-            print("end")
-        })
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        searchViewModel.getFromCoreData()
     }
     
     
     private func setupViews() {
-        searchBarView.delegate = self
         
+        tableView.tableFooterView = UIView()
+        activityView.isHidden = true
+        tableView.delegate = self
+        tableView.dataSource = self
+        self.setupSearchController()
+        
+        searchViewModel.filteredDataATMResponse.bind { (_) in
+            self.tableView.reloadData()
+        }
     }
-
+    
+    @IBAction func saveButtonPressed(_ sender: UIButton) {
+        print("saveButtonPressed")
+    }
+    @IBAction func leftButtonPressed(_ sender: UIButton) {
+        searchViewModel.deleteAllData(entity: "CoreDataATM")
+        print("leftButtonPressed: \(searchViewModel.coreDataATMResponse)")
+    }
+    
 }
