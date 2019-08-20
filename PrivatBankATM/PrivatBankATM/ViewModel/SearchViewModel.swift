@@ -17,6 +17,8 @@ class SearchViewModel {
     var dataATMResponse = DataATMResponse()
     var filteredDataATMResponse : Box<DataATMResponse> = Box(DataATMResponse())
     var savedDataATMResponse = DataATMResponse()
+    var status : Box<SearchStatusEnum> = Box(SearchStatusEnum.none)
+    var requestProgress : Box<RequestProgress> = Box(RequestProgress.none)
     
     var coreDataATMResponse = [NSManagedObject]()
     

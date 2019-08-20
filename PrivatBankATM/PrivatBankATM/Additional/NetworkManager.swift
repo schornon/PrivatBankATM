@@ -24,14 +24,21 @@ class NetworkManager {
         guard let req = request.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else { return }
         guard let url = URL(string: "\(urlString)\(req)") else { print("guard URL fail"); return }
         print(url)
+        searchViewModel?.requestProgress.value = .stageTwo
         Alamofire.request(url).responseJSON { (response) in
             print("Alamofire success")
-            guard let data = response.data else { return }
+            guard let data = response.data else { print("guard response.data error"); return }
             print("saved data: |\(data)|")
+            self.searchViewModel?.requestProgress.value = .stageThree
             do {
                 let parsedResult = try JSONDecoder().decode(DataATMResponse.self, from: data)
+                if parsedResult.devices.isEmpty {
+                    print("parsedResult.isEmpty")
+                    self.searchViewModel?.status.value = .failure
+                }
                 self.searchViewModel?.dataATMResponse = parsedResult
                 self.searchViewModel?.saveToCoreData()
+                self.searchViewModel?.requestProgress.value = .stageFour
                 clouser()
             } catch {
                 print("JSONDecoder failuer")

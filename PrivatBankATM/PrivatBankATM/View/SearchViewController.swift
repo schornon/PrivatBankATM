@@ -16,6 +16,7 @@ class SearchViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityView: UIActivityIndicatorView!
+    @IBOutlet weak var progressView: UIProgressView!
     
     
     override func viewDidLoad() {
@@ -48,6 +49,31 @@ class SearchViewController: UIViewController {
         searchViewModel.filteredDataATMResponse.bind { (_) in
             self.tableView.reloadData()
         }
+        searchViewModel.status.bind {
+            if $0 == .failure {
+                SharedClass.sharedInstance.alert(view: self, title: "Error", message: "Request has failed")
+            }
+        }
+        setRequestStatusBing()
+    }
+    
+    private func setRequestStatusBing() {
+        searchViewModel.requestProgress.bind {
+            switch $0 {
+            case .none:
+                break
+            case .stageOne:
+                self.activityView.startSpinning()
+                self.set(progressView: self.progressView, withDuration: 1, toProgress: 0.25)
+            case .stageTwo:
+                self.set(progressView: self.progressView, withDuration: 3, toProgress: 0.55)
+            case .stageThree:
+                self.set(progressView: self.progressView, withDuration: 1, toProgress: 0.85)
+            case .stageFour:
+                self.activityView.stopSpinning()
+               self.set(progressView: self.progressView, withDuration: 1, toProgress: 1.0)
+            }
+        }
     }
     
     @IBAction func saveButtonPressed(_ sender: UIButton) {
@@ -68,5 +94,6 @@ class SearchViewController: UIViewController {
             //print(vc?.searchViewModel?.savedDataATMResponse)
         }
     }
+    
     
 }

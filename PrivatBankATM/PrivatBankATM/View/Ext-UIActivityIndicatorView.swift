@@ -11,13 +11,13 @@ import UIKit
 
 extension UIActivityIndicatorView {
     
-    func startSpinning(_ sender: UIActivityIndicatorView) {
-        sender.isHidden = false
-        sender.startAnimating()
+    func startSpinning() {
+        self.isHidden = false
+        self.startAnimating()
     }
     
-    func stopSpinning(_ sender: UIActivityIndicatorView) {
-        sender.isHidden = true
-        sender.stopAnimating()
+    func stopSpinning() {
+        self.isHidden = true
+        self.stopAnimating()
     }
 }

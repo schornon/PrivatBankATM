@@ -15,6 +15,8 @@
 		A9099244230C00CC00E7FEDD /* Ext-SavedViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9099243230C00CC00E7FEDD /* Ext-SavedViewController+TableView.swift */; };
 		A9099246230C015E00E7FEDD /* SavedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9099245230C015E00E7FEDD /* SavedTableViewCell.swift */; };
 		A9099248230C0AFB00E7FEDD /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9099247230C0AFB00E7FEDD /* MapViewController.swift */; };
+		A909924A230C301100E7FEDD /* SharedClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9099249230C301100E7FEDD /* SharedClass.swift */; };
+		A909924C230C31B700E7FEDD /* SearchStatusEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A909924B230C31B700E7FEDD /* SearchStatusEnum.swift */; };
 		A94C46CB230A9B4F0058511E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94C46CA230A9B4F0058511E /* AppDelegate.swift */; };
 		A94C46D0230A9B4F0058511E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A94C46CE230A9B4F0058511E /* Main.storyboard */; };
 		A94C46D2230A9B560058511E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A94C46D1230A9B560058511E /* Assets.xcassets */; };
@@ -26,8 +28,6 @@
 		A9790E0E230AA9DA004A9794 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9790E0D230AA9DA004A9794 /* NetworkManager.swift */; };
 		A9790E10230AAF9F004A9794 /* DataATM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9790E0F230AAF9F004A9794 /* DataATM.swift */; };
 		A9790E13230AD0AE004A9794 /* privatDataATM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A9790E11230AD0AE004A9794 /* privatDataATM.xcdatamodeld */; };
-		A9790E15230AEC75004A9794 /* CDataATM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9790E14230AEC75004A9794 /* CDataATM.swift */; };
-		A9790E17230AF589004A9794 /* StructDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9790E16230AF589004A9794 /* StructDecoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +41,8 @@
 		A9099243230C00CC00E7FEDD /* Ext-SavedViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext-SavedViewController+TableView.swift"; sourceTree = "<group>"; };
 		A9099245230C015E00E7FEDD /* SavedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTableViewCell.swift; sourceTree = "<group>"; };
 		A9099247230C0AFB00E7FEDD /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		A9099249230C301100E7FEDD /* SharedClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedClass.swift; sourceTree = "<group>"; };
+		A909924B230C31B700E7FEDD /* SearchStatusEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStatusEnum.swift; sourceTree = "<group>"; };
 		A94C46C7230A9B4F0058511E /* PrivatBankATM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrivatBankATM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A94C46CA230A9B4F0058511E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A94C46CF230A9B4F0058511E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,8 +56,6 @@
 		A9790E0D230AA9DA004A9794 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		A9790E0F230AAF9F004A9794 /* DataATM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataATM.swift; sourceTree = "<group>"; };
 		A9790E12230AD0AE004A9794 /* privatDataATM.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = privatDataATM.xcdatamodel; sourceTree = "<group>"; };
-		A9790E14230AEC75004A9794 /* CDataATM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDataATM.swift; sourceTree = "<group>"; };
-		A9790E16230AF589004A9794 /* StructDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructDecoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,8 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				A9790E0F230AAF9F004A9794 /* DataATM.swift */,
-				A9790E14230AEC75004A9794 /* CDataATM.swift */,
-				A9790E16230AF589004A9794 /* StructDecoder.swift */,
+				A909924B230C31B700E7FEDD /* SearchStatusEnum.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -161,6 +160,7 @@
 			children = (
 				A9790E09230AA781004A9794 /* Box.swift */,
 				A9790E0D230AA9DA004A9794 /* NetworkManager.swift */,
+				A9099249230C301100E7FEDD /* SharedClass.swift */,
 			);
 			path = Additional;
 			sourceTree = "<group>";
@@ -286,14 +286,14 @@
 				A9099242230BFCB000E7FEDD /* SavedViewController.swift in Sources */,
 				A9790E0A230AA781004A9794 /* Box.swift in Sources */,
 				A9790E06230AA705004A9794 /* SearchViewController.swift in Sources */,
-				A9790E15230AEC75004A9794 /* CDataATM.swift in Sources */,
-				A9790E17230AF589004A9794 /* StructDecoder.swift in Sources */,
 				A9790E13230AD0AE004A9794 /* privatDataATM.xcdatamodeld in Sources */,
 				A9099246230C015E00E7FEDD /* SavedTableViewCell.swift in Sources */,
 				A94C46CB230A9B4F0058511E /* AppDelegate.swift in Sources */,
+				A909924A230C301100E7FEDD /* SharedClass.swift in Sources */,
 				A909923C230BDA1900E7FEDD /* Ext-SearchViewController+TableView.swift in Sources */,
 				A909923E230BE51800E7FEDD /* SearchTableViewCell.swift in Sources */,
 				A9099240230BF34000E7FEDD /* Ext-UIActivityIndicatorView.swift in Sources */,
+				A909924C230C31B700E7FEDD /* SearchStatusEnum.swift in Sources */,
 				A9790E0C230AA8E5004A9794 /* Extension-SearchViewController+UISearchBarDelegate.swift in Sources */,
 				A9790E10230AAF9F004A9794 /* DataATM.swift in Sources */,
 				A9099248230C0AFB00E7FEDD /* MapViewController.swift in Sources */,

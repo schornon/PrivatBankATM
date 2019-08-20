@@ -43,12 +43,33 @@ extension SearchViewController: UISearchResultsUpdating, UISearchBarDelegate {
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+
+        searchViewModel.requestProgress.value = .stageOne
         guard let text = searchBar.text else { return }
-        self.activityView.startSpinning(activityView)
         searchViewModel.fetchData(request: text) {
             self.tableView.reloadData()
             searchBar.text = ""
-            self.activityView.stopSpinning(self.activityView)
+        }
+    }
+    
+    func set(progressView: UIProgressView, withDuration: TimeInterval, toProgress: Float) {
+        
+        DispatchQueue.main.async {
+            if toProgress > 0.0 && toProgress < 1.0 {
+                
+                UIView.animate(withDuration: withDuration) {
+                    progressView.isHidden = false
+                    self.progressView.setProgress(toProgress, animated: true)
+                }
+            } else if toProgress == 1.0 {
+                UIView.animate(withDuration: withDuration, animations: {
+                    progressView.isHidden = true
+                    self.progressView.setProgress(toProgress, animated: true)
+                }) { [weak self] (_) in
+                    self!.progressView.setProgress(0.0, animated: false)
+                }
+                
+            }
         }
     }
     

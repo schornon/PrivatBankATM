@@ -63,12 +63,19 @@
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="zlI-fW-d0o">
                                 <rect key="frame" x="197" y="438" width="20" height="20"/>
                             </activityIndicatorView>
+                            <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qKV-FG-Hoa">
+                                <rect key="frame" x="83" y="466" width="248" height="2"/>
+                                <color key="tintColor" red="0.96705514192581177" green="0.79262453317642212" blue="0.39984434843063354" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZKL-YV-2Fy" secondAttribute="trailing" id="Mvn-Nm-bcX"/>
                             <constraint firstItem="ZKL-YV-2Fy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OaW-Ov-DZj"/>
+                            <constraint firstItem="qKV-FG-Hoa" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="6/10" id="aVu-K5-6cV"/>
                             <constraint firstItem="zlI-fW-d0o" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-27" id="fuM-O5-jkT"/>
+                            <constraint firstItem="qKV-FG-Hoa" firstAttribute="top" secondItem="zlI-fW-d0o" secondAttribute="bottom" constant="8" id="gOe-Be-PR6"/>
+                            <constraint firstItem="qKV-FG-Hoa" firstAttribute="centerX" secondItem="zlI-fW-d0o" secondAttribute="centerX" id="jUF-yo-acV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZKL-YV-2Fy" secondAttribute="bottom" id="mIx-Hx-H2a"/>
                             <constraint firstItem="zlI-fW-d0o" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="reC-Vj-EVS"/>
                             <constraint firstItem="ZKL-YV-2Fy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yeB-Gc-err"/>
@@ -102,6 +109,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="activityView" destination="zlI-fW-d0o" id="Oof-q3-g58"/>
+                        <outlet property="progressView" destination="qKV-FG-Hoa" id="cnC-3p-1n5"/>
                         <outlet property="tableView" destination="ZKL-YV-2Fy" id="Jk7-DI-Kva"/>
                     </connections>
                 </viewController>

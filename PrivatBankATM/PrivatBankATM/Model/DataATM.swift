@@ -9,9 +9,6 @@
 import Foundation
 
 struct DataATMResponse: Decodable {
-//    enum CodingKeys: String, CodingKey {
-//        case devices
-//    }
     var devices = [DataATM]()
 }
 

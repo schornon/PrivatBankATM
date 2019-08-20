@@ -24,12 +24,11 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         
         DispatchQueue.main.async {
             var elem = DataATM(type: "empty", cityRU: "", cityUA: "", cityEN: "", fullAddressRu: "", fullAddressUa: "", fullAddressEn: "", placeRu: "", placeUa: "", latitude: "", longitude: "")
-            if self.isFiltering() {
+            if self.isFiltering() && indexPath.row <= self.searchViewModel.filteredDataATMResponse.value.devices.count {
                 elem = self.searchViewModel.filteredDataATMResponse.value.devices[indexPath.row]
             } else {
                 elem = self.searchViewModel.dataATMResponse.devices[indexPath.row]
             }
-            //cell.textLabel!.text = elem.fullAddressRu
             cell.cellLabel.text = elem.fullAddressRu
             
             if !self.searchViewModel.savedDataATMResponse.devices.contains(where: { $0.fullAddressRu == elem.fullAddressRu }) {
@@ -38,8 +37,6 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.cellImageView.image = UIImage(named: "Favorit1")
             }
         }
-        
-        
         return cell
     }
     
@@ -55,7 +52,6 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
             } else {
                 searchViewModel.savedDataATMResponse.devices.append(searchViewModel.dataATMResponse.devices[indexPath.row])
             }
-            
         } else {
             cell.cellImageView.image = UIImage(named: "Favorit0")
             searchViewModel.savedDataATMResponse.devices.removeAll(where: { $0.fullAddressRu == cell.cellLabel.text })
