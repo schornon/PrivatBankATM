@@ -21,13 +21,13 @@ class NetworkManager {
     
     func fetchData(request: String, clouser: @escaping ()->()) {
         print("NetworkManager - fetchData")
-        guard let req = request.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else { return }
-        guard let url = URL(string: "\(urlString)\(req)") else { print("guard URL fail"); return }
+        guard let req = request.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else { self.searchViewModel?.status.value = .failure; return }
+        guard let url = URL(string: "\(urlString)\(req)") else { print("guard URL fail"); self.searchViewModel?.status.value = .failure; return }
         print(url)
         searchViewModel?.requestProgress.value = .stageTwo
         Alamofire.request(url).responseJSON { (response) in
             print("Alamofire success")
-            guard let data = response.data else { print("guard response.data error"); return }
+            guard let data = response.data else { print("guard response.data error"); self.searchViewModel?.status.value = .failure; return }
             print("saved data: |\(data)|")
             self.searchViewModel?.requestProgress.value = .stageThree
             do {
@@ -42,6 +42,7 @@ class NetworkManager {
                 clouser()
             } catch {
                 print("JSONDecoder failuer")
+                self.searchViewModel?.status.value = .failure
             }
         }
         
