@@ -81,10 +81,6 @@ class SearchViewController: UIViewController {
         performSegue(withIdentifier: "segueFromSearchToSaved", sender: self)
         
     }
-    @IBAction func leftButtonPressed(_ sender: UIButton) {
-        searchViewModel.deleteAllData(entity: "CoreDataATM")
-        print("leftButtonPressed: \(searchViewModel.coreDataATMResponse)")
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is SavedViewController {
