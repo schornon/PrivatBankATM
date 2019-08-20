@@ -20,8 +20,8 @@
         <relationship name="coreDataATM" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoreDataATM" syncable="YES"/>
     </entity>
     <elements>
-        <element name="CoreDataATMResponse" positionX="-228.3359375" positionY="19.25" width="128" height="58"/>
         <element name="CoreDataATM" positionX="-54" positionY="0" width="128" height="208"/>
-        <element name="CoreDataATMAsArray" positionX="-126" positionY="99" width="128" height="60"/>
+        <element name="CoreDataATMResponse" positionX="-228.3359375" positionY="19.25" width="128" height="58"/>
+        <element name="CoreDataATMAsArray" positionX="-144" positionY="72" width="128" height="60"/>
     </elements>
 </model>

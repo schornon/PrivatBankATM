@@ -14,7 +14,6 @@ class SavedViewController: UIViewController {
     
     weak var searchViewModel : SearchViewModel?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

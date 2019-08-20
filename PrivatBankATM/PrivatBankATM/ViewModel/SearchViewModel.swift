@@ -19,8 +19,6 @@ class SearchViewModel {
     var savedDataATMResponse = DataATMResponse()
     
     var coreDataATMResponse = [NSManagedObject]()
-    var coreDataOfArray = [NSManagedObject]()
-    
     
     init() {
         self.networkManager = NetworkManager(searchViewModel: self)
@@ -33,16 +31,12 @@ class SearchViewModel {
     
     func saveToCoreData() {
         self.deleteAllData(entity: "CoreDataATM")
-        print("coreDataATMResponse after dellAll : \(coreDataATMResponse)")
+
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
         }
         
         let managedContext = appDelegate.persistentContainer.viewContext
-
-        //let entity = NSEntityDescription.entity(forEntityName: "CoreDataATMResponse", in: managedContext)!
-        //let data = NSManagedObject(entity: entity, insertInto: managedContext)
-        
         
         for d in self.dataATMResponse.devices {
             let entity2 = NSEntityDescription.entity(forEntityName: "CoreDataATM", in: managedContext)!
@@ -69,15 +63,6 @@ class SearchViewModel {
             self.filteredDataATMResponse.value = self.dataATMResponse
             
         }
-        
-        //data.setValue(coreDataATMResponse, forKey: "coreDataATM")
-        
-//        do {
-//            try managedContext.save()
-//            //coreDataATMResponse.append(data)
-//        } catch let error as NSError {
-//            print("save to coreData error \(error)")
-//        }
     }
     
     func getFromCoreData() {
@@ -128,63 +113,7 @@ class SearchViewModel {
         } catch let error as NSError {
             print("Delete all data in \(entity) error : \(error) \(error.userInfo)")
         }
-        
     }
-    
-    
-    ///////////////////////////////////////////////////////////////////////
-    
-    func saveToDataOfArray(data: Data) {
-        
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-        let managedContext = appDelegate.persistentContainer.viewContext
-        
-        let entity = NSEntityDescription.entity(forEntityName: "CoreDataATMAsArray", in: managedContext)!
-        let dataAsArray = NSManagedObject(entity: entity, insertInto: managedContext)
-        
-        
-        dataAsArray.setValue(data, forKey: "dataOfArray")
-        do {
-            try managedContext.save()
-            coreDataOfArray.append(dataAsArray)
-        } catch let error as NSError {
-            print(error)
-        }
-    }
-    
-    func convertDataToStruct() {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-        let managedContext = appDelegate.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "CoreDataATMAsArray")
-        
-        do {
-            let results = try managedContext.fetch(fetchRequest) as AnyObject as! Array<Any>
-            print(results)
-            if results.count != 0 {
-                for res in results {
-                    //let d = res.value
-                    print(res)
-                }
-                //self.convertDataToDataATM(data: result as! Data)
-            }
-        } catch let error as NSError {
-            print(error)
-        }
-    }
-    
-    func convertDataToDataATM(data: Data) -> DataATMResponse {
-        do {
-            let parsedResult = try JSONDecoder().decode(DataATMResponse.self, from: data)
-            return parsedResult
-        } catch {
-            print("JSONDecoder failuer")
-        }
-        return DataATMResponse()
-    }
-    
+
     
 }

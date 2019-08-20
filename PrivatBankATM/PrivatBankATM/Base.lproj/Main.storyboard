@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Search View Controller-->
+        <!--ATMs-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SearchViewController" customModule="PrivatBankATM" customModuleProvider="target" sceneMemberID="viewController">
@@ -75,7 +75,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="1kS-KV-lac">
+                    <navigationItem key="navigationItem" title="ATMs" id="1kS-KV-lac">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="6sL-Qi-aAK">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FA7-1n-3s2">
                                 <rect key="frame" x="20" y="7" width="92" height="30"/>
@@ -109,7 +109,7 @@
             </objects>
             <point key="canvasLocation" x="944.92753623188412" y="18.75"/>
         </scene>
-        <!--Saved View Controller-->
+        <!--Saved-->
         <scene sceneID="eRY-5Q-FgJ">
             <objects>
                 <viewController id="iTF-YH-fuA" customClass="SavedViewController" customModule="PrivatBankATM" customModuleProvider="target" sceneMemberID="viewController">
@@ -168,6 +168,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QGG-cp-A5j"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Saved" id="WyX-ps-9O6"/>
                     <connections>
                         <outlet property="savedTableView" destination="mvA-29-bbE" id="yka-OP-MTA"/>
                         <segue destination="0Oq-na-HOH" kind="show" identifier="segueFromSavedToMap" id="CfU-Ft-FLA"/>
