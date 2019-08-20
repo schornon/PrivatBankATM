@@ -33,5 +33,23 @@ extension SavedViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //tableView.deselectRow(at: indexPath, animated: true)
+        
+        performSegue(withIdentifier: "segueFromSavedToMap", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is MapViewController {
+            print("segue.destination is MapViewController")
+            
+            guard let indexPath = savedTableView.indexPathForSelectedRow else { return }
+            savedTableView.deselectRow(at: indexPath, animated: true)
+            guard let vc = segue.destination as? MapViewController else { return }
+            //vc.searchViewModel = searchViewModel
+            vc.atm = searchViewModel?.savedDataATMResponse.devices[indexPath.row]
+        }
+        
+    }
     
 }

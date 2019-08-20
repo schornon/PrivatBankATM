@@ -14,6 +14,7 @@
 		A9099242230BFCB000E7FEDD /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9099241230BFCB000E7FEDD /* SavedViewController.swift */; };
 		A9099244230C00CC00E7FEDD /* Ext-SavedViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9099243230C00CC00E7FEDD /* Ext-SavedViewController+TableView.swift */; };
 		A9099246230C015E00E7FEDD /* SavedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9099245230C015E00E7FEDD /* SavedTableViewCell.swift */; };
+		A9099248230C0AFB00E7FEDD /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9099247230C0AFB00E7FEDD /* MapViewController.swift */; };
 		A94C46CB230A9B4F0058511E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94C46CA230A9B4F0058511E /* AppDelegate.swift */; };
 		A94C46D0230A9B4F0058511E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A94C46CE230A9B4F0058511E /* Main.storyboard */; };
 		A94C46D2230A9B560058511E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A94C46D1230A9B560058511E /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 		A9099241230BFCB000E7FEDD /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
 		A9099243230C00CC00E7FEDD /* Ext-SavedViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext-SavedViewController+TableView.swift"; sourceTree = "<group>"; };
 		A9099245230C015E00E7FEDD /* SavedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTableViewCell.swift; sourceTree = "<group>"; };
+		A9099247230C0AFB00E7FEDD /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A94C46C7230A9B4F0058511E /* PrivatBankATM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrivatBankATM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A94C46CA230A9B4F0058511E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A94C46CF230A9B4F0058511E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				A9099241230BFCB000E7FEDD /* SavedViewController.swift */,
 				A9099243230C00CC00E7FEDD /* Ext-SavedViewController+TableView.swift */,
 				A9099245230C015E00E7FEDD /* SavedTableViewCell.swift */,
+				A9099247230C0AFB00E7FEDD /* MapViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				A9099240230BF34000E7FEDD /* Ext-UIActivityIndicatorView.swift in Sources */,
 				A9790E0C230AA8E5004A9794 /* Extension-SearchViewController+UISearchBarDelegate.swift in Sources */,
 				A9790E10230AAF9F004A9794 /* DataATM.swift in Sources */,
+				A9099248230C0AFB00E7FEDD /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

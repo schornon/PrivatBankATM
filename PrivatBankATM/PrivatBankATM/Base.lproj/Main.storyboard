@@ -170,11 +170,41 @@
                     </view>
                     <connections>
                         <outlet property="savedTableView" destination="mvA-29-bbE" id="yka-OP-MTA"/>
+                        <segue destination="0Oq-na-HOH" kind="show" identifier="segueFromSavedToMap" id="CfU-Ft-FLA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GTL-Mn-kNE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1744.9275362318842" y="19.419642857142858"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="j7z-Qk-KJm">
+            <objects>
+                <viewController id="0Oq-na-HOH" customClass="MapViewController" customModule="PrivatBankATM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zuG-F8-yDz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Jcw-8g-scq">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ux4-K5-LEg" firstAttribute="trailing" secondItem="Jcw-8g-scq" secondAttribute="trailing" id="EQq-6p-B8s"/>
+                            <constraint firstItem="Ux4-K5-LEg" firstAttribute="bottom" secondItem="Jcw-8g-scq" secondAttribute="bottom" id="Qqj-Xb-vir"/>
+                            <constraint firstItem="Jcw-8g-scq" firstAttribute="leading" secondItem="Ux4-K5-LEg" secondAttribute="leading" id="pgt-eg-QDs"/>
+                            <constraint firstItem="Jcw-8g-scq" firstAttribute="top" secondItem="Ux4-K5-LEg" secondAttribute="top" id="yKQ-u7-Ssv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ux4-K5-LEg"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="Jcw-8g-scq" id="x25-sN-Dlm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RwT-ER-ueh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2612" y="19"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ABa-Vb-sdV">
