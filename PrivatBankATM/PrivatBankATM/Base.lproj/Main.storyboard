@@ -96,7 +96,7 @@
                                 </connections>
                             </button>
                             <connections>
-                                <segue destination="iTF-YH-fuA" kind="show" id="mLf-Dc-UNs"/>
+                                <segue destination="iTF-YH-fuA" kind="show" identifier="segueFromSearchToSaved" id="mLf-Dc-UNs"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -120,6 +120,43 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mvA-29-bbE">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="savedTableViewCell" rowHeight="73" id="fhD-5h-QVs" customClass="SavedTableViewCell" customModule="PrivatBankATM" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="73"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fhD-5h-QVs" id="2v6-Oq-fmw">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="72.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xx9-y2-rC6">
+                                                    <rect key="frame" x="20" y="27" width="338" height="19"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info0" translatesAutoresizingMaskIntoConstraints="NO" id="wxz-xr-eiy">
+                                                    <rect key="frame" x="374" y="26.5" width="20" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="GgX-1k-qJz"/>
+                                                        <constraint firstAttribute="width" constant="20" id="bcp-2G-mHS"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="xx9-y2-rC6" firstAttribute="top" secondItem="2v6-Oq-fmw" secondAttribute="topMargin" constant="16" id="7eE-Y5-4bU"/>
+                                                <constraint firstItem="wxz-xr-eiy" firstAttribute="trailing" secondItem="2v6-Oq-fmw" secondAttribute="trailingMargin" id="Qz9-S3-U5w"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="xx9-y2-rC6" secondAttribute="bottom" constant="16" id="Z5P-22-Smw"/>
+                                                <constraint firstItem="wxz-xr-eiy" firstAttribute="centerY" secondItem="2v6-Oq-fmw" secondAttribute="centerY" id="lUA-FE-Jxk"/>
+                                                <constraint firstItem="wxz-xr-eiy" firstAttribute="leading" secondItem="xx9-y2-rC6" secondAttribute="trailing" constant="16" id="r0F-cO-HYL"/>
+                                                <constraint firstItem="xx9-y2-rC6" firstAttribute="leading" secondItem="2v6-Oq-fmw" secondAttribute="leadingMargin" id="wv3-BA-GMW"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellImageView" destination="wxz-xr-eiy" id="WwH-CE-7cy"/>
+                                            <outlet property="cellLabel" destination="xx9-y2-rC6" id="U9c-03-BlZ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -137,7 +174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GTL-Mn-kNE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1745" y="20"/>
+            <point key="canvasLocation" x="1744.9275362318842" y="19.419642857142858"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ABa-Vb-sdV">
@@ -161,5 +198,6 @@
     <resources>
         <image name="Favorit0" width="32" height="32"/>
         <image name="Favorit1" width="32" height="32"/>
+        <image name="info0" width="32" height="32"/>
     </resources>
 </document>

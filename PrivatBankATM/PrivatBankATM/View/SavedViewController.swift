@@ -12,12 +12,20 @@ class SavedViewController: UIViewController {
 
     @IBOutlet weak var savedTableView: UITableView!
     
+    weak var searchViewModel : SearchViewModel?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupViews()
     }
     
+    private func setupViews() {
+        
+        savedTableView.tableFooterView = UIView()
+        savedTableView.delegate = self
+        savedTableView.dataSource = self
+    }
 
 }

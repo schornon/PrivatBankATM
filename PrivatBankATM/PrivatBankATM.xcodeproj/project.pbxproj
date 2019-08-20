@@ -12,6 +12,8 @@
 		A909923E230BE51800E7FEDD /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A909923D230BE51800E7FEDD /* SearchTableViewCell.swift */; };
 		A9099240230BF34000E7FEDD /* Ext-UIActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A909923F230BF34000E7FEDD /* Ext-UIActivityIndicatorView.swift */; };
 		A9099242230BFCB000E7FEDD /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9099241230BFCB000E7FEDD /* SavedViewController.swift */; };
+		A9099244230C00CC00E7FEDD /* Ext-SavedViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9099243230C00CC00E7FEDD /* Ext-SavedViewController+TableView.swift */; };
+		A9099246230C015E00E7FEDD /* SavedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9099245230C015E00E7FEDD /* SavedTableViewCell.swift */; };
 		A94C46CB230A9B4F0058511E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94C46CA230A9B4F0058511E /* AppDelegate.swift */; };
 		A94C46D0230A9B4F0058511E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A94C46CE230A9B4F0058511E /* Main.storyboard */; };
 		A94C46D2230A9B560058511E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A94C46D1230A9B560058511E /* Assets.xcassets */; };
@@ -35,6 +37,8 @@
 		A909923D230BE51800E7FEDD /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		A909923F230BF34000E7FEDD /* Ext-UIActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext-UIActivityIndicatorView.swift"; sourceTree = "<group>"; };
 		A9099241230BFCB000E7FEDD /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
+		A9099243230C00CC00E7FEDD /* Ext-SavedViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext-SavedViewController+TableView.swift"; sourceTree = "<group>"; };
+		A9099245230C015E00E7FEDD /* SavedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTableViewCell.swift; sourceTree = "<group>"; };
 		A94C46C7230A9B4F0058511E /* PrivatBankATM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrivatBankATM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A94C46CA230A9B4F0058511E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A94C46CF230A9B4F0058511E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -135,6 +139,8 @@
 				A909923D230BE51800E7FEDD /* SearchTableViewCell.swift */,
 				A909923F230BF34000E7FEDD /* Ext-UIActivityIndicatorView.swift */,
 				A9099241230BFCB000E7FEDD /* SavedViewController.swift */,
+				A9099243230C00CC00E7FEDD /* Ext-SavedViewController+TableView.swift */,
+				A9099245230C015E00E7FEDD /* SavedTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -271,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9099244230C00CC00E7FEDD /* Ext-SavedViewController+TableView.swift in Sources */,
 				A9790E0E230AA9DA004A9794 /* NetworkManager.swift in Sources */,
 				A9790E08230AA775004A9794 /* SearchViewModel.swift in Sources */,
 				A9099242230BFCB000E7FEDD /* SavedViewController.swift in Sources */,
@@ -279,6 +286,7 @@
 				A9790E15230AEC75004A9794 /* CDataATM.swift in Sources */,
 				A9790E17230AF589004A9794 /* StructDecoder.swift in Sources */,
 				A9790E13230AD0AE004A9794 /* privatDataATM.xcdatamodeld in Sources */,
+				A9099246230C015E00E7FEDD /* SavedTableViewCell.swift in Sources */,
 				A94C46CB230A9B4F0058511E /* AppDelegate.swift in Sources */,
 				A909923C230BDA1900E7FEDD /* Ext-SearchViewController+TableView.swift in Sources */,
 				A909923E230BE51800E7FEDD /* SearchTableViewCell.swift in Sources */,

@@ -63,11 +63,4 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         print(searchViewModel.savedDataATMResponse.devices)
     }
     
-    
-    /*
-     if isFiltering() {
-     return searchViewModel.filteredDataATMResponse.value.devices.count
-     }
-     return searchViewModel.dataATMResponse.devices.count
-    */
 }
