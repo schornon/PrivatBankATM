@@ -23,8 +23,8 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "searchTableViewCell", for: indexPath) as! SearchTableViewCell
         
         DispatchQueue.main.async {
-            var elem = DataATM(type: "empty", cityRU: "", cityUA: "", cityEN: "", fullAddressRu: "", fullAddressUa: "", fullAddressEn: "", placeRu: "", placeUa: "", latitude: "", longitude: "")
-            if self.isFiltering() && indexPath.row <= self.searchViewModel.filteredDataATMResponse.value.devices.count {
+            var elem = DataATM(type: "empty", cityRU: "", cityUA: "", cityEN: "", fullAddressRu: "", fullAddressUa: "", fullAddressEn: "", placeRu: "", placeUa: "", latitude: "", longitude: "", tw: TimeWork())
+            if self.isFiltering() && indexPath.row < self.searchViewModel.filteredDataATMResponse.value.devices.count {
                 elem = self.searchViewModel.filteredDataATMResponse.value.devices[indexPath.row]
             } else {
                 elem = self.searchViewModel.dataATMResponse.devices[indexPath.row]

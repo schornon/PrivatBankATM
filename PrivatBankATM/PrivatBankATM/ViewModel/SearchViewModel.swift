@@ -54,7 +54,28 @@ class SearchViewModel {
             data2.setValue(d.longitude, forKey: "longitude")
             data2.setValue(d.placeRu, forKey: "placeRu")
             data2.setValue(d.placeUa, forKey: "placeUa")
-            //print("managedObject 'data2' : \(data2)")
+            
+            //let twEntity = NSEntityDescription.entity(forEntityName: "CoreDataTimeWork", in: managedContext)!
+            //let twData = NSManagedObject(entity: twEntity, insertInto: managedContext)
+            if let tw = NSEntityDescription.insertNewObject(forEntityName: "CoreDataTimeWork", into: managedContext) as? CoreDataTimeWork {
+                tw.mon = d.tw.mon
+                tw.tue = d.tw.tue
+                tw.wed = d.tw.wed
+                tw.thu = d.tw.thu
+                tw.fri = d.tw.fri
+                tw.sat = d.tw.sat
+                tw.sun = d.tw.sun
+                tw.hol = d.tw.hol
+                data2.setValue(tw, forKey: "coreDataTW")
+            }
+            
+//            print("+++\(data2.value(forKey: "coreDataTW"))++++")
+            
+            
+            
+            
+            
+            
             
             do {
                 try managedContext.save()
@@ -80,6 +101,19 @@ class SearchViewModel {
             print(error)
         }
         for dev in coreDataATMResponse {
+            
+            guard let devTW = dev.value(forKey: "coreDataTW") as? CoreDataTimeWork else { print("devTW guard"); return }
+            
+            let timeWork = TimeWork(mon: String(describing: devTW.mon!),
+                                    tue: String(describing: devTW.tue!),
+                                    wed: String(describing: devTW.wed!),
+                                    thu: String(describing: devTW.thu!),
+                                    fri: String(describing: devTW.fri!),
+                                    sat: String(describing: devTW.sat!),
+                                    sun: String(describing: devTW.sun!),
+                                    hol: String(describing: devTW.hol!))
+            
+            
             dataATMResponse.devices.append(DataATM(type: dev.value(forKey: "type") as! String,
                                                    cityRU: dev.value(forKey: "cityRU") as! String,
                                                    cityUA: dev.value(forKey: "cityUA") as! String,
@@ -90,7 +124,8 @@ class SearchViewModel {
                                                    placeRu: dev.value(forKey: "placeRu") as! String,
                                                    placeUa: dev.value(forKey: "placeUa") as! String,
                                                    latitude: dev.value(forKey: "latitude") as! String,
-                                                   longitude: dev.value(forKey: "longitude") as! String))
+                                                   longitude: dev.value(forKey: "longitude") as! String,
+                                                   tw: timeWork))
         }
     }
     

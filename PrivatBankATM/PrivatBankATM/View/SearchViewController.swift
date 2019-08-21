@@ -23,7 +23,6 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
 
         setupViews()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -52,6 +51,8 @@ class SearchViewController: UIViewController {
         searchViewModel.status.bind {
             if $0 == .failure {
                 SharedClass.sharedInstance.alert(view: self, title: "Error", message: "Request has failed")
+                self.progressView.isHidden = true
+                self.progressView.progress = 0
             }
         }
         setRequestStatusBing()
@@ -63,14 +64,14 @@ class SearchViewController: UIViewController {
             case .none:
                 break
             case .stageOne:
-                self.activityView.startSpinning()
+                //self.activityView.startSpinning()
                 self.set(progressView: self.progressView, withDuration: 1, toProgress: 0.25)
             case .stageTwo:
-                self.set(progressView: self.progressView, withDuration: 3, toProgress: 0.55)
+                self.set(progressView: self.progressView, withDuration: 7, toProgress: 0.55)
             case .stageThree:
                 self.set(progressView: self.progressView, withDuration: 1, toProgress: 0.85)
             case .stageFour:
-                self.activityView.stopSpinning()
+                //self.activityView.stopSpinning()
                self.set(progressView: self.progressView, withDuration: 1, toProgress: 1.0)
             }
         }

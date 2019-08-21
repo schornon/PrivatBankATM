@@ -24,5 +24,16 @@ struct DataATM: Decodable {
     var placeUa : String
     var latitude : String
     var longitude : String
-    
+    var tw = TimeWork()
+}
+
+struct TimeWork: Decodable {
+    var mon : String = ""
+    var tue : String = ""
+    var wed : String = ""
+    var thu : String = ""
+    var fri : String = ""
+    var sat : String = ""
+    var sun : String = ""
+    var hol : String = ""
 }

@@ -12,6 +12,7 @@
         <attribute name="placeRu" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="placeUa" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="coreDataTW" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoreDataTimeWork" syncable="YES"/>
     </entity>
     <entity name="CoreDataATMAsArray" representedClassName="CoreDataATMAsArray" syncable="YES" codeGenerationType="class">
         <attribute name="dataOfArray" optional="YES" attributeType="Binary" syncable="YES"/>
@@ -19,9 +20,20 @@
     <entity name="CoreDataATMResponse" representedClassName="CoreDataATMResponse" syncable="YES" codeGenerationType="class">
         <relationship name="coreDataATM" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoreDataATM" syncable="YES"/>
     </entity>
+    <entity name="CoreDataTimeWork" representedClassName="CoreDataTimeWork" syncable="YES" codeGenerationType="class">
+        <attribute name="fri" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hol" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mon" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sat" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sun" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thu" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tue" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wed" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="CoreDataATM" positionX="-54" positionY="0" width="128" height="208"/>
+        <element name="CoreDataATM" positionX="17.3515625" positionY="-61.4140625" width="128" height="223"/>
+        <element name="CoreDataATMAsArray" positionX="-137.80078125" positionY="428.3359375" width="128" height="60"/>
         <element name="CoreDataATMResponse" positionX="-228.3359375" positionY="19.25" width="128" height="58"/>
-        <element name="CoreDataATMAsArray" positionX="-144" positionY="72" width="128" height="60"/>
+        <element name="CoreDataTimeWork" positionX="-192.09375" positionY="119.1796875" width="108.421875" height="163"/>
     </elements>
 </model>
