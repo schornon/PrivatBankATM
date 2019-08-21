@@ -30,6 +30,7 @@ class NetworkManager {
             guard let data = response.data else { print("guard response.data error"); self.searchViewModel?.status.value = .failure; return }
             print("saved data: |\(data)|")
             self.searchViewModel?.requestProgress.value = .stageThree
+            
             do {
                 let parsedResult = try JSONDecoder().decode(DataATMResponse.self, from: data)
                 if parsedResult.devices.isEmpty {

@@ -26,7 +26,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
             var elem = DataATM(type: "empty", cityRU: "", cityUA: "", cityEN: "", fullAddressRu: "", fullAddressUa: "", fullAddressEn: "", placeRu: "", placeUa: "", latitude: "", longitude: "", tw: TimeWork())
             if self.isFiltering() && indexPath.row < self.searchViewModel.filteredDataATMResponse.value.devices.count {
                 elem = self.searchViewModel.filteredDataATMResponse.value.devices[indexPath.row]
-            } else {
+            } else if indexPath.row < self.searchViewModel.dataATMResponse.devices.count {
                 elem = self.searchViewModel.dataATMResponse.devices[indexPath.row]
             }
             cell.cellLabel.text = elem.fullAddressRu

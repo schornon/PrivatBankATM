@@ -39,7 +39,6 @@ class SearchViewModel {
         }
         
         let managedContext = appDelegate.persistentContainer.viewContext
-        
         for d in self.dataATMResponse.devices {
             let entity2 = NSEntityDescription.entity(forEntityName: "CoreDataATM", in: managedContext)!
             let data2 = NSManagedObject(entity: entity2, insertInto: managedContext)
@@ -55,8 +54,6 @@ class SearchViewModel {
             data2.setValue(d.placeRu, forKey: "placeRu")
             data2.setValue(d.placeUa, forKey: "placeUa")
             
-            //let twEntity = NSEntityDescription.entity(forEntityName: "CoreDataTimeWork", in: managedContext)!
-            //let twData = NSManagedObject(entity: twEntity, insertInto: managedContext)
             if let tw = NSEntityDescription.insertNewObject(forEntityName: "CoreDataTimeWork", into: managedContext) as? CoreDataTimeWork {
                 tw.mon = d.tw.mon
                 tw.tue = d.tw.tue
@@ -68,25 +65,18 @@ class SearchViewModel {
                 tw.hol = d.tw.hol
                 data2.setValue(tw, forKey: "coreDataTW")
             }
-            
-//            print("+++\(data2.value(forKey: "coreDataTW"))++++")
-            
-            
-            
-            
-            
-            
-            
-            do {
-                try managedContext.save()
-                coreDataATMResponse.append(data2)
-            } catch let error as NSError {
-                print("save to coreData error \(error)")
-            }
-            self.filteredDataATMResponse.value = self.dataATMResponse
+            coreDataATMResponse.append(data2)
             
         }
+        do {
+            try managedContext.save()
+            
+        } catch let error as NSError {
+            print("save to coreData error \(error)")
+        }
+        self.filteredDataATMResponse.value = self.dataATMResponse
     }
+    
     
     func getFromCoreData() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
@@ -152,5 +142,4 @@ class SearchViewModel {
         }
     }
 
-    
 }
